@@ -8,13 +8,13 @@ import (
 )
 
 type RequestPayload struct {
-	Action string      `json:"action`
+	Action string      `json:"action"`
 	Auth   AuthPayload `json:"auth,omitempty"`
 }
 
 type AuthPayload struct {
-	Email    string `json:"email`
-	Password string `json:"password`
+	Email    string `json:"email"`
+	Password string `json:"password"`
 }
 
 func (app *Config) Broker(w http.ResponseWriter, r *http.Request) {
@@ -39,7 +39,7 @@ func (app *Config) HandleSubmission(w http.ResponseWriter, r *http.Request) {
 	case "auth":
 		app.Authenticate(w, requestPayload.Auth)
 	default:
-		app.errorJSON(w, errors.New("unkownn action"))
+		app.errorJSON(w, errors.New("unknown action"))
 	}
 }
 
