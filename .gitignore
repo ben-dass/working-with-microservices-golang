@@ -21,3 +21,5 @@
 /db-data/postgres/postgres.auto.conf
 /db-data/postgres/postmaster.opts
 /db-data/postgres/postmaster.pid
+
+/db-data/mongo
